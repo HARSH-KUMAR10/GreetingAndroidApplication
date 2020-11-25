@@ -4,15 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/layout1">
 
-    <TextView
+    <ImageView
+        android:id="@+id/background1"
+        android:src="@drawable/activity1background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/layout1"
+        app:layout_constraintBottom_toBottomOf="@+id/layout1"
+        app:layout_constraintLeft_toLeftOf="@+id/layout1"
+        app:layout_constraintRight_toRightOf="@+id/layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/HeadingChooseCelebration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Choose Celebration"
+        android:textColor="@color/purple_500"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background1" />
+
+    <Button
+        android:id="@+id/BirthdayCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/yellow"
+
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:text="Birthday "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeadingChooseCelebration" />
+
+    <Button
+        android:id="@+id/NewYearCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/yellow"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:text="New Years"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeadingChooseCelebration" />
+
+    <Button
+        android:id="@+id/FriendshipCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:backgroundTint="@color/yellow"
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:layout_marginTop="350dp"
+        android:text="Friendship"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeadingChooseCelebration" />
+
+    <Button
+        android:id="@+id/ExitButton"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Exit"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/background1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FriendshipCard" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
